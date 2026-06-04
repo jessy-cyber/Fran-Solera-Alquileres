@@ -1,0 +1,248 @@
+:root {
+  --blue: #003893;
+  --red: #c8102e;
+  --white: #ffffff;
+  --gray: #f7f7f7;
+  --text: #202020;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--gray);
+  color: var(--text);
+}
+
+.hero {
+  background: linear-gradient(180deg, var(--blue) 0%, #072b6f 60%, var(--red) 100%);
+  color: var(--white);
+  padding: 3rem 1rem 4rem;
+  text-align: center;
+}
+
+.flag-bar {
+  display: inline-block;
+  width: 80px;
+  height: 8px;
+  margin: 0 4px 1rem;
+  border-radius: 999px;
+}
+
+.flag-bar.blue {
+  background: var(--blue);
+}
+
+.flag-bar.white {
+  background: var(--white);
+}
+
+.flag-bar.red {
+  background: var(--red);
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin: 0.5rem 0 1rem;
+}
+
+.hero p {
+  max-width: 760px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.logo-box {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 1.25rem;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  border-radius: 22px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+}
+
+.contact-card {
+  background: var(--white);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.5rem;
+}
+
+.contact-card h2 {
+  margin: 0 0 0.75rem;
+  color: var(--blue);
+  font-size: 1.9rem;
+}
+
+.contact-card p {
+  margin: 0 0 1.5rem;
+  line-height: 1.75;
+  color: #333;
+}
+
+.contact-card a {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-card a:hover,
+.contact-card a:focus-visible {
+  text-decoration: underline;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.15rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.social-button:hover,
+.social-button:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.social-button svg {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.social-button.facebook {
+  background: #1877f2;
+}
+
+.social-button.instagram {
+  background: radial-gradient(circle at 30% 30%, #f58529 0%, #dd2a7b 40%, #8134af 65%, #515bd4 100%);
+}
+
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.95rem 1.4rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  color: var(--white);
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.whatsapp-button:hover,
+.whatsapp-button:focus-visible {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.whatsapp-button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+
+.container {
+  width: min(1200px, calc(100% - 2rem));
+  margin: -3rem auto 2rem;
+  padding: 0 0 2rem;
+}
+
+.intro {
+  background: var(--white);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.intro h2 {
+  margin: 0 0 1rem;
+  color: var(--blue);
+  font-size: 2rem;
+}
+
+.intro p {
+  margin: 0;
+  line-height: 1.8;
+  color: #4a4a4a;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+
+.card h3 {
+  margin: 1rem;
+  color: var(--red);
+}
+
+.card p {
+  margin: 0 1rem 1.5rem;
+  color: #4d4d4d;
+  line-height: 1.7;
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5rem 1rem 3rem;
+  color: #333;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 2.5rem 1rem 3rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .whatsapp-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
